@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios Sociales</title>
+    <!-- Styles -->
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculador de Precios Sociales</h1>
+    <h2>1. Configuración</h2>
+    <form class="conf">
+        <!-- Método de aplicación -->
+        <label for="method">Método de aplicación:</label>
+        <select name="method" id="method-select">
+            <option value="0"></option>
+            <option value="1">Moneda local utilizando precios internos</option>
+            <option value="2">Moneda local utilizando precios de frontera</option>
+            <option value="3">Moneda extranjera utilizando precios de frontera</option>
+        </select>
+
+        <br/><br/>
+
+        <!-- Etapa del proyecto -->
+        <label for="phase">Etapa del proyecto:</label>
+        <select name="phase" id="phase-select">
+            <option value="0"></option>
+            <option value="1">Perfil o Prefactibilidad</option>
+            <option value="2">Factibilidad</option>
+        </select>
+
+        <br/><br/>
+
+        <!-- Archivo de entrada -->
+        <label for="file">Archivo de entrada:</label>
+        <input type="file" id="file-input" name="file" accept=".xlsx" />
+    
+        <br/><br/>
+
+        <!-- Configuración avanzada -->
+        <a href="#">Configuración avanzada</a>
+
+        <br/><br/>
+
+        <button type="button">Calcular precios sociales</button>
+    </form>
+
+    <h2>2. Resultado</h2>
+    <div class="results">
+        <table>
+            <!-- Header -->
+            <tr>
+              <th>Producto</th>
+              <th>Código</th>
+              <th>Clasificación</th>
+              <th>Precio Económico</th>
+              <th>Factores...</th>
+              <th>Precio Social</th>
+            </tr>
+            <!-- First Row -->
+            <tr>
+              <td>Cemento</td>
+              <td>
+                  <select>
+                      <option value="0"></option>
+                      <option value="1">NP001 - Frijoles</option>
+                      <option value="0">...</option>
+                      <option value="28">NP028 - Ganado Bovino</option>
+                      <option value="0">...</option>
+                      <option value="91" selected>NP090 - Cemento, cal y yeso</option>
+                      <option value="0">...</option>
+                      <option value="103">NP103 - Equipo eléctrico de iluminación</option>
+                      <option value="0">...</option>
+                    </select>
+                </td>
+                <td>No transable</td>
+                <td>₡1000</td>
+                <td>...</td>
+              <td>₡1200</td>
+            </tr>
+            <!-- Second Row -->
+            <tr>
+                <td>Equipo eléctrico de iluminación</td>
+                <td>
+                    <select>
+                      <option value="0"></option>
+                      <option value="1">NP001 - Frijoles</option>
+                      <option value="0">...</option>
+                      <option value="28">NP028 - Ganado Bovino</option>
+                      <option value="0">...</option>
+                      <option value="91">NP090 - Cemento, cal y yeso</option>
+                      <option value="0">...</option>
+                      <option value="103" selected>NP103 - Equipo eléctrico de iluminación</option>
+                      <option value="0">...</option>
+                    </select>
+                </td>
+                <td>Transable</td>
+                <td>₡500</td>
+                <td>...</td>
+                <td>₡560</td>
+              </tr>
+        </table>
+
+        <br/><br/>
+
+        <button type="button">Descargar resultados</button>
+    </div>
+</body>
+</html>
